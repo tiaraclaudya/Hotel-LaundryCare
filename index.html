@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hotel LaundryCare</title>
+  <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <style>
+    body { font-family: 'DM Sans', sans-serif; }
+    .font-heading { font-family: 'Playfair Display', serif; }
+    
+    @keyframes spin-slow { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+    @keyframes bounce-gentle { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-8px); } }
+    @keyframes float { 0%, 100% { transform: translateY(0) rotate(0deg); } 50% { transform: translateY(-12px) rotate(3deg); } }
+    @keyframes bubble { 0%, 100% { transform: scale(1) translateY(0); opacity: 0.7; } 50% { transform: scale(1.2) translateY(-10px); opacity: 1; } }
+    
+    .spin-slow { animation: spin-slow 8s linear infinite; }
+    .bounce-gentle { animation: bounce-gentle 2s ease-in-out infinite; }
+    .float-anim { animation: float 3s ease-in-out infinite; }
+    .bubble-anim { animation: bubble 2.5s ease-in-out infinite; }
+    
+    .fade-up { opacity: 0; transform: translateY(30px); transition: all 0.6s ease; }
+    .fade-up.visible { opacity: 1; transform: translateY(0); }
+    
+    .service-card:hover { transform: translateY(-8px); }
+    .service-card { transition: all 0.3s ease; }
+    .hero-overlay { background: linear-gradient(135deg, rgba(6, 41, 64, 0.85) 0%, rgba(15, 55, 90, 0.8) 100%); }
+    .bubbles-container { position: absolute; width: 100%; height: 100%; overflow: hidden; pointer-events: none; }
+    .bubble-dot { position: absolute; border-radius: 50%; background: rgba(255,255,255,0.15); }
+    
+    .carousel-img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0; animation: carouselFade 12s ease-in-out infinite; }
+    .carousel-img:nth-child(1) { animation-delay: 0s; }
+    .carousel-img:nth-child(2) { animation-delay: 4s; }
+    .carousel-img:nth-child(3) { animation-delay: 8s; }
+    
+    @keyframes carouselFade { 0%, 8% { opacity: 1; } 25%, 100% { opacity: 0; } }
+  </style>
+</head>
+<body class="w-full" style="background: rgb(248, 250, 252);">
+  
+  <div id="root"></div>
+  
+  <script type="module" src="/src/main.jsx"></script>
+</body>
+</html>
