@@ -9,7 +9,7 @@ function FeedbackPage() {
 
   const fetchFeedback = async () => {
     try {
-      const response = await axios.get('http://localhost:3000/api/kontak');
+      const response = await axios.get('https://backend-laundry-care-hotel.vercel.app/api/kontak');
       if (response.data.success) {
         setLaundryOrders(response.data.data);
       }

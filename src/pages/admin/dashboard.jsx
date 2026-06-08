@@ -9,7 +9,7 @@ function DashboardPage() {
 
   const fetchOrders = async () => {
     try {
-      const response = await axios.get('http://localhost:3000/api/informasiPelanggan');
+      const response = await axios.get('https://backend-laundry-care-hotel.vercel.app/api/informasiPelanggan');
       if (response.data.success) {
         setLaundryOrders(response.data.data);
       }

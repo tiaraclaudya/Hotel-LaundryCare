@@ -236,7 +236,7 @@ function LandingPage() {
                   onSubmit={async (e) => {
                     e.preventDefault();
                     try {
-                      const response = await axios.post('http://localhost:3000/api/kontak/create', {
+                      const response = await axios.post('https://backend-laundry-care-hotel.vercel.app/api/kontak/create', {
                         nama_lengkap: kontakInput.nama_lengkap,
                         email: kontakInput.email,
                         pesan: kontakInput.pesan
@@ -325,7 +325,7 @@ function LandingPage() {
               onSubmit={async (e) => {
                 e.preventDefault();
                 try {
-                  const response = await axios.post('http://localhost:3000/api/informasiPelanggan', {
+                  const response = await axios.post('https://backend-laundry-care-hotel.vercel.app/api/informasiPelanggan', {
                     jenis_layanan: detailInput.jenis_layanan,
                     nama_lengkap: detailInput.nama_lengkap,
                     no_telepon: detailInput.no_telepon,
